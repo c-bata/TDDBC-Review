@@ -13,6 +13,10 @@ class TaskTests(unittest.TestCase):
         task = Task()
         self.assertIsInstance(task, Task)
 
+    def test_create_task_with_summary(self):
+        task = Task('summary')
+        self.assertEqual(task.summary, 'summary')
+
 
 if __name__ == '__main__':
     unittest.main()

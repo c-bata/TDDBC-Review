@@ -3,4 +3,5 @@ __author__ = 'masashi'
 
 
 class Task(object):
-    pass
+    def __init__(self, summary=None):
+        self.summary = 'summary'

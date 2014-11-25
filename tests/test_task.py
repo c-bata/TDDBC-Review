@@ -9,13 +9,18 @@ from task import Task
 
 
 class TaskTests(unittest.TestCase):
-    def test_create_task(self):
-        task = Task()
-        self.assertIsInstance(task, Task)
+    def create_task(self, summary):
+        return Task(summary)
 
-    def test_create_task_with_summary(self):
-        task = Task('summary')
-        self.assertEqual(task.summary, 'summary')
+    def test_create_task_with_summary1(self):
+        summary = 'summary1'
+        task = self.create_task(summary)
+        self.assertEqual(task.summary, summary)
+
+    def test_create_task_with_summary2(self):
+        summary = 'summary2'
+        task = self.create_task(summary)
+        self.assertEqual(task.summary, summary)
 
 
 if __name__ == '__main__':
